@@ -39,7 +39,7 @@ class App extends Component {
       username: addfield,
       email: addfield + "@gmail.com"
     }
-    this.setState({ robots: [...robots, toAdd], addfield: ''});
+    this.setState({ robots: [...robots, toAdd] });
   }
 
   render () {
