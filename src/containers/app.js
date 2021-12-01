@@ -13,10 +13,9 @@ const App = () => {
   const {
     value: firstName,
     setValue: setFirst,
-    reset: resetFirst,
   } = useInput("");
-  const { value: lastName, setValue: setLast, reset: resetLast } = useInput("");
-  const { value: email, setValue: setEmail, reset: resetEmail } = useInput("");
+  const { value: lastName, setValue: setLast } = useInput("");
+  const { value: email, setValue: setEmail } = useInput("");
 
   useEffect(() => {
     async function fetchRobots() {
@@ -39,9 +38,6 @@ const App = () => {
     };
     console.log("full name", toAdd.name);
     setRobots([...robots, toAdd]);
-    resetFirst();
-    resetLast();
-    resetEmail();
   };
 
   const filteredRobots = robots.filter((robot) => {
